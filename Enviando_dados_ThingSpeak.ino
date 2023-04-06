@@ -7,9 +7,9 @@
  
 DHT dht(DHTPIN, DHTTYPE);
 
-#define SSID "BDAG"
-#define SENHA "bdag2018"
-#define IDCANAL 2097379
+#define SSID "****"
+#define SENHA "****"
+#define IDCANAL seuid
 
 WiFiClient client;
 
@@ -44,7 +44,7 @@ void loop() {
   ThingSpeak.setField(1, temperatura);
   ThingSpeak.setField(2, humidade);
 
-  int retorno = ThingSpeak.writeFields(IDCANAL, "Sua_Chave_Aqui");
+  int retorno = ThingSpeak.writeFields(IDCANAL, "IT93OB9IT7EYLICJ");
 
   if(retorno == 200) {
     Serial.println("Dados gravados corretamente no ThingSpeak");
