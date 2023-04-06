@@ -44,7 +44,7 @@ void loop() {
   ThingSpeak.setField(1, temperatura);
   ThingSpeak.setField(2, humidade);
 
-  int retorno = ThingSpeak.writeFields(IDCANAL, "IT93OB9IT7EYLICJ");
+  int retorno = ThingSpeak.writeFields(IDCANAL, "Sua_Chave_Aqui");
 
   if(retorno == 200) {
     Serial.println("Dados gravados corretamente no ThingSpeak");
